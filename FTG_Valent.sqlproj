@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>FTG_Valent</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{2d79ecf2-31b7-4303-93db-2278fc146d4e}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>FTG_Valent</RootNamespace>
+    <AssemblyName>FTG_Valent</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="PowerBI\" />
+    <Folder Include="PowerBI\Tables\" />
+    <Folder Include="PowerBI\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="PowerBI\Functions\" />
+    <Folder Include="PowerBI\Stored Procedures\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\matchpayforsap1.sql" />
+    <Build Include="PowerBI\Tables\facInvSales_As_of_Month.sql" />
+    <Build Include="PowerBI\Tables\facSales_As_of_Month.sql" />
+    <Build Include="PowerBI\Tables\Full_Access_Users.sql" />
+    <Build Include="PowerBI\Tables\GLN_Access.sql" />
+    <Build Include="PowerBI\Tables\Sales_Hierarchy_Access.sql" />
+    <Build Include="PowerBI\Tables\Stored_Proc_Tracking.sql" />
+    <Build Include="dbo\Tables\Exposure.sql" />
+    <Build Include="dbo\Tables\facSales.sql" />
+    <Build Include="PowerBI\Tables\Territory_Access.sql" />
+    <Build Include="PowerBI\Tables\Year_Scopes_for_Selection.sql" />
+    <Build Include="PowerBI\Tables\Year_Types_for_Selection.sql" />
+    <Build Include="PowerBI\Tables\Years_for_Selection.sql" />
+    <Build Include="dbo\Tables\MatchPay03102023.sql" />
+    <Build Include="dbo\Tables\dimPTC_Xref.sql" />
+    <Build Include="dbo\Tables\matchpayforsap4.sql" />
+    <Build Include="dbo\Tables\dimSku_Xref.sql" />
+    <Build Include="dbo\Tables\MPATList3.sql" />
+    <Build Include="dbo\Tables\dimUOM_Xref.sql" />
+    <Build Include="dbo\Tables\matchpayforsap5.sql" />
+    <Build Include="dbo\Tables\EBID_GLN.sql" />
+    <Build Include="dbo\Tables\MatchPay_Archive.sql" />
+    <Build Include="dbo\Tables\independentRetailerInventory.sql" />
+    <Build Include="dbo\Tables\dimInitiative.sql" />
+    <Build Include="dbo\Tables\InvoiceSales.sql" />
+    <Build Include="dbo\Tables\OpenOrders.sql" />
+    <Build Include="dbo\Tables\dimHierarchy_QP.sql" />
+    <Build Include="dbo\Tables\MPATList4.sql" />
+    <Build Include="dbo\Tables\matchpayforsap6.sql" />
+    <Build Include="dbo\Tables\EBID_Replacements.sql" />
+    <Build Include="dbo\Tables\dimProductLineName.sql" />
+    <Build Include="dbo\Tables\Channel_Link_Security.sql" />
+    <Build Include="dbo\Tables\facInventoryErrors.sql" />
+    <Build Include="dbo\Tables\ACDOCA.sql" />
+    <Build Include="dbo\Tables\facInventoryFinal.sql" />
+    <Build Include="dbo\Tables\facInventory.sql" />
+    <Build Include="dbo\Tables\BIAccessLevel.sql" />
+    <Build Include="dbo\Tables\dimSku_RemovedFromReplication.sql" />
+    <Build Include="dbo\Tables\ACH_Payments_Archive.sql" />
+    <Build Include="dbo\Tables\OpenOrders_v1.sql" />
+    <Build Include="dbo\Tables\BISecurity.sql" />
+    <Build Include="dbo\Tables\BIUserRole.sql" />
+    <Build Include="dbo\Tables\dimProductLineXref.sql" />
+    <Build Include="dbo\Tables\Pay_Approve_AG_PRO.sql" />
+    <Build Include="dbo\Tables\dimDistributorGroup.sql" />
+    <Build Include="dbo\Tables\Conversions.sql" />
+    <Build Include="dbo\Tables\dimDistributor.sql" />
+    <Build Include="dbo\Tables\dimRegionName.sql" />
+    <Build Include="dbo\Tables\Exposure_Qualifications.sql" />
+    <Build Include="dbo\Tables\CheckPayment.sql" />
+    <Build Include="dbo\Tables\facInventory_2024_02_24_PreRedistricting.sql" />
+    <Build Include="dbo\Tables\dimRep.sql" />
+    <Build Include="dbo\Tables\ValentPrices.sql" />
+    <Build Include="dbo\Tables\facInventoryFinal_2024_02_24_PreRedistricting.sql" />
+    <Build Include="dbo\Tables\Hierarchy_For_Reporting_2024_02_24_PreRedistricting.sql" />
+    <Build Include="dbo\Tables\OpenOrders_2024_02_24_PreRedistricting.sql" />
+    <Build Include="dbo\Tables\dimRegionNameXref.sql" />
+    <Build Include="dbo\Tables\dimTerritory.sql" />
+    <Build Include="dbo\Tables\dimReseller.sql" />
+    <Build Include="dbo\Tables\MatchPay.sql" />
+    <Build Include="dbo\Tables\ACH_Payments.sql" />
+    <Build Include="dbo\Tables\tbl_UOM_Conversion.sql" />
+    <Build Include="dbo\Tables\TempTerritories.sql" />
+    <Build Include="dbo\Tables\tbl_PTC_Conversion.sql" />
+    <Build Include="dbo\Tables\EDIBatch.sql" />
+    <Build Include="PowerBI\Tables\Access_All.sql" />
+    <Build Include="dbo\Tables\temp.sql" />
+    <Build Include="dbo\Tables\tbl_SKU_Conversion.sql" />
+    <Build Include="PowerBI\Tables\Access_Commercial_Unit.sql" />
+    <Build Include="dbo\Tables\RPTG_SYSTEM.sql" />
+    <Build Include="dbo\Tables\dimValentPricing.sql" />
+    <Build Include="dbo\Tables\EDIDownloads.sql" />
+    <Build Include="PowerBI\Tables\Access_Region.sql" />
+    <Build Include="PowerBI\Tables\Access_Territory.sql" />
+    <Build Include="dbo\Tables\RPTG_SYSTEM1.sql" />
+    <Build Include="dbo\Tables\Hierarchy_For_Reporting.sql" />
+    <Build Include="PowerBI\Tables\Consumption_Model.sql" />
+    <Build Include="PowerBI\Tables\dimDate.sql" />
+    <Build Include="dbo\Tables\facSales_2024_03_14_PreSlalomChanges.sql" />
+    <Build Include="dbo\Tables\dimTerritory_Rep.sql" />
+    <Build Include="dbo\Tables\dimInitiativeXref.sql" />
+    <Build Include="dbo\Tables\matchpayforsap.sql" />
+    <Build Include="PowerBI\Tables\dimDate_CY.sql" />
+    <Build Include="dbo\Tables\MPATList1.sql" />
+    <Build Include="PowerBI\Tables\dimDate_FY.sql" />
+    <Build Include="PowerBI\Tables\dimDate_FY_and_MY.sql" />
+    <Build Include="PowerBI\Tables\dimDate_MY.sql" />
+    <Build Include="PowerBI\Tables\dimSalesHierarchy.sql" />
+    <Build Include="dbo\Tables\EBIDDirectory.sql" />
+    <Build Include="dbo\Tables\MPATList2.sql" />
+    <Build Include="PowerBI\Tables\dimYearMonths.sql" />
+    <Build Include="dbo\Tables\dimGrowth.sql" />
+    <Build Include="PowerBI\Tables\facEdiSales.sql" />
+    <Build Include="PowerBI\Tables\facIn_Channel_Inventory.sql" />
+    <Build Include="dbo\Tables\missingSellersInSTEBID.sql" />
+    <Build Include="dbo\Tables\dimSku.sql" />
+    <Build Include="PowerBI\Tables\facInventory.sql" />
+    <Build Include="PowerBI\Tables\facInventoryAnalysis.sql" />
+    <Build Include="PowerBI\Tables\facInvoiceSales.sql" />
+    <Build Include="dbo\Tables\Errors.sql" />
+    <Build Include="PowerBI\Views\uvw_facInvoiceSales.sql" />
+    <Build Include="PowerBI\Views\uvw_dimReseller.sql" />
+    <Build Include="PowerBI\Views\uvw_facEDI_Sales.sql" />
+    <Build Include="PowerBI\Views\uvw_facInvoiceSales_Expanded.sql" />
+    <Build Include="PowerBI\Views\uvw_BISecurity_with_Reversed_Names.sql" />
+    <Build Include="PowerBI\Views\uvw_dimSalesHierarchy.sql" />
+    <Build Include="PowerBI\Views\uvw_dimProduct.sql" />
+    <Build Include="PowerBI\Views\uvw_facEDI_Sales_Expanded.sql" />
+    <Build Include="PowerBI\Views\uvw_dimReseller_04082021.sql" />
+    <Build Include="PowerBI\Views\uvw_Hierarchy_For_Reporting.sql" />
+    <Build Include="PowerBI\Views\uvw_Hierarchy_With_Concat_EBIDs.sql" />
+    <Build Include="PowerBI\Views\uvw_Inventory_InScope_DateKeys.sql" />
+    <Build Include="Security\VALENTGLOBALNET_sqlam.sql" />
+    <Build Include="Security\VALENTGLOBALNET_sqlam_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_dmong.sql" />
+    <Build Include="Security\VALENTGLOBALNET_dmong_1.sql" />
+    <Build Include="Security\ftgreader.sql" />
+    <Build Include="Security\ftgreader_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_msan2.sql" />
+    <Build Include="Security\VALENTGLOBALNET_msan2_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_skure.sql" />
+    <Build Include="Security\VALENTGLOBALNET_skure_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_stask.sql" />
+    <Build Include="Security\VALENTGLOBALNET_stask_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_lsche.sql" />
+    <Build Include="Security\VALENTGLOBALNET_lsche_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_mspin.sql" />
+    <Build Include="Security\VALENTGLOBALNET_mspin_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_mpent.sql" />
+    <Build Include="Security\VALENTGLOBALNET_mpent_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_slape.sql" />
+    <Build Include="Security\VALENTGLOBALNET_slape_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_SQLAppMgr.sql" />
+    <Build Include="Security\VALENTGLOBALNET_SQLAppMgr_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_lnard.sql" />
+    <Build Include="Security\VALENTGLOBALNET_lnard_1.sql" />
+    <Build Include="Security\BoomiDataReader.sql" />
+    <Build Include="Security\BoomiDataReader_1.sql" />
+    <Build Include="Security\ReportReader.sql" />
+    <Build Include="Security\ReportReader_1.sql" />
+    <Build Include="Security\BIReportReader.sql" />
+    <Build Include="Security\BIReportReader_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_tmors.sql" />
+    <Build Include="Security\VALENTGLOBALNET_tmors_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_svc_sftpJobs.sql" />
+    <Build Include="Security\VALENTGLOBALNET_svc_sftpJobs_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_amoha.sql" />
+    <Build Include="Security\VALENTGLOBALNET_amoha_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_cmat3.sql" />
+    <Build Include="Security\VALENTGLOBALNET_cmat3_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_JHans.sql" />
+    <Build Include="Security\VALENTGLOBALNET_JHans_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_amurp.sql" />
+    <Build Include="Security\VALENTGLOBALNET_amurp_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_dgibs.sql" />
+    <Build Include="Security\VALENTGLOBALNET_dgibs_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_svc_EDISyncPROD.sql" />
+    <Build Include="Security\VALENTGLOBALNET_svc_EDISyncPROD_1.sql" />
+    <Build Include="Security\VALENTGLOBALNET_jcane.sql" />
+    <Build Include="Security\VALENTGLOBALNET_jcane_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\fnNumPadLeft.sql" />
+    <Build Include="PowerBI\Functions\ufn_PowerBI_Get_Level2_for_EBID.sql" />
+    <Build Include="PowerBI\Functions\ufn_PowerBI_Get_Level3_for_EBID.sql" />
+    <Build Include="PowerBI\Functions\ufn_PowerBI_Get_PTC_Business_Group_Common_Name.sql" />
+    <Build Include="PowerBI\Functions\ufn_PowerBI_Get_PTC_Business_Group_Disposition.sql" />
+    <Build Include="PowerBI\Functions\ufn_Starting_CY_Date.sql" />
+    <Build Include="PowerBI\Functions\ufn_Starting_FY_Date.sql" />
+    <Build Include="PowerBI\Functions\ufn_Starting_MY_Date.sql" />
+    <Build Include="dbo\Functions\ufn_Get_EBID_From_RPTG_System.sql" />
+    <Build Include="dbo\Functions\ufn_Split.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_dimDate_FY_and_MY_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_dimSalesHierarchy_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_dimYearMonths_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_Full_and_GLN_Access_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_Populate_dimDate.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_Populate_dimDate_CY.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_Populate_dimDate_FY.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_Populate_dimDate_MY.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_PowerBI_Consumption_Model_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_PowerBI_facEdiSales_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_PowerBI_facInventory_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_PowerBI_facInventoryAnalysis_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_PowerBI_facInvoiceSales_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_PowerBI_facInvSales_As_of_Month_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_PowerBI_facSales_As_of_Month_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_Refresh_All.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_DeleteEDIDistributerInventory.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_Territory_Access_Refresh.sql" />
+    <Build Include="PowerBI\Stored Procedures\usp_Years_for_Selection_Refresh.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_DeleteEDIInventory.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_InsertBatch.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_InsertDownloadedFile.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_UpdateBatch.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_UpdateDistributorInventoryEBIDs.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_UpdateInventoryEBIDs.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateFacSalesFromSQL101.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdatefacInventoryFinalFromSQL101.sql" />
+    <Build Include="dbo\Stored Procedures\sp_MSins_dbofacInventory.sql" />
+    <Build Include="dbo\Stored Procedures\sp_MSupd_dbofacInventory.sql" />
+    <Build Include="dbo\Stored Procedures\sp_MSdel_dbofacInventory.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Update_TKXS_ACH_ValentPaymentDate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Update_FTG_Valent_ACH_ValentPaymentDate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpdateValentPrices.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_DeleteExistingDataFromFacSales.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_InsertEDIData.sql" />
+    <Build Include="dbo\Stored Procedures\spEDI_UpdateFacSalesResellerAndDistributorEBIDs.sql" />
+    <Build Include="Security\BoomiDataReader_2.sql" />
+    <Build Include="Security\PowerBI.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FTG_ValentDatabase.Dev.publish.xml" />
+    <None Include="FTG_ValentDatabase.Prod.publish.xml" />
+    <None Include="FTG_ValentDatabase.QA.publish.xml" />
+  </ItemGroup>
+</Project>
